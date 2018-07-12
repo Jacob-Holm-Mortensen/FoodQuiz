@@ -9,14 +9,14 @@
     <ion-row>
       <ion-col col-5>
         <ion-list>
-          <ion-item style="font-size: 1.5em">
+          <ion-item class="hs">
             <strong>Highscore</strong>
           </ion-item>
           <ion-item *ngFor="let user of topTen">
-            <div style="display: inline-block; width: 45%" *ngIf="user.userName.length > 0 && user.score >= 0">
+            <div class="hs-name" *ngIf="user.userName.length > 0 && user.score >= 0">
                 {{user.userName}}: 
             </div>
-            <div style="display: inline-block; width: 45%; text-align: right;"  *ngIf="user.userName.length > 0 && user.score >= 0">
+            <div class="hs-score"  *ngIf="user.userName.length > 0 && user.score >= 0">
                 {{user.score}}
             </div>
           </ion-item>
