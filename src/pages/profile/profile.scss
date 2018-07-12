@@ -7,6 +7,21 @@ page-profile {
 //     overflow-y: hidden;
 // }
 
+.hs{
+    font-size: 1.5em;
+}
+
+.hs-name{
+    display: inline-block;
+    width: 45%;
+}
+
+.hs-score{
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+}
+
 // @media only screen and (max-width: 320px) {
 
 //     body { 
