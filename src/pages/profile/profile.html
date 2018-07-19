@@ -1,27 +1,26 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Profil</ion-title>
+    <ion-title>Mise En Place</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="profile scroll-content">
+<ion-content padding class="profile">
   <ion-grid>
     <ion-row>
-      <ion-col col-5>
+      <ion-col col-4 style="margin-top: 0.2em;">
         <ion-list>
-          <ion-item class="hs">
-            <strong>Highscore</strong>
-          </ion-item>
-          <ion-item *ngFor="let user of topTen">
-            <div class="hs-name" *ngIf="user.userName.length > 0 && user.score >= 0">
-                {{user.userName}}: 
-            </div>
-            <div class="hs-score"  *ngIf="user.userName.length > 0 && user.score >= 0">
-                {{user.score}}
+          <ion-item class="hs-title hs-height"> <strong>Highscore</strong> </ion-item>
+          <ion-item class="hs-height" *ngFor="let user of topFive">
+            <div *ngIf="user.userName.length > 0 && user.score >= 0">
+                <div class="hs-name"> {{user.userName}}: </div>
+                <div class="hs-score"> {{user.score}} </div>
             </div>
           </ion-item>
         </ion-list>
+        <div class="friend-box center border"> Friend list </div>
       </ion-col>
+      <div col-4 class="pic-adv center border middle-box"> Knife Picture </div>
+      <div col-3 class="pic-adv center border right-box"> Advertisement </div>
     </ion-row>
   </ion-grid>
 </ion-content>
